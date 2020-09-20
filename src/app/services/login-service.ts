@@ -18,7 +18,7 @@ export class LoginService {
     }
 
     authenticateUserLogin(userDetails: UserInfo): Observable<any> {
-        return this.httpClient.post('app/login/authenticate', userDetails, {
+        return this.httpClient.post(this.url + 'app/login/authenticate', userDetails, {
             headers: new HttpHeaders({
                 'Content-Type': 'application/json'
             })
